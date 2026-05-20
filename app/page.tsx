@@ -14,6 +14,7 @@ import {
   Mail,
   Phone,
 } from 'lucide-react';
+import { featuredStatement } from '@/lib/statements';
 
 export default function Home() {
   useEffect(() => {
@@ -119,46 +120,52 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Highlights */}
-      <section className="border-y border-primary/10 bg-slate-50/80 py-16 sm:py-20" aria-label="Highlights">
+      {/* Featured statement */}
+      <section
+        className="border-y border-primary/10 bg-slate-50/80 py-16 sm:py-20"
+        aria-labelledby="featured-statement-heading"
+      >
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-10 lg:grid-cols-2 lg:gap-14 lg:items-center">
-            <div data-aos="fade-right">
-              <h2 className="text-2xl font-bold text-text-dark sm:text-3xl">
-                Trusted numbers, grounded in{' '}
-                <span className="text-primary">people and place</span>
-              </h2>
-              <p className="mt-4 text-text-dim leading-relaxed">
-                Whether you need straightforward accounting guidance or broader business insight, the
-                aim is practical help that respects your time—and the community we share.
-              </p>
-              <Link
-                href="/statements"
-                className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-secondary hover:text-accent-hover"
-              >
-                Read statements
-                <ArrowRight className="size-4" aria-hidden />
-              </Link>
-            </div>
-
-            <ul className="space-y-4" data-aos="fade-left">
-              {[
-                'Clear, approachable explanations—no unnecessary jargon.',
-                'Support aligned with Irish small-business and sole-trader realities.',
-                'Long-term ties to Portlaoise and surrounding areas.',
-              ].map((item) => (
-                <li
-                  key={item}
-                  className="flex gap-4 rounded-2xl border border-primary/10 bg-white p-5 shadow-sm"
+          <article
+            className="relative overflow-hidden rounded-3xl border border-primary/10 bg-white p-8 shadow-sm sm:p-10"
+            data-aos="fade-up"
+          >
+            <div
+              className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-primary/10 blur-3xl"
+              aria-hidden
+            />
+            <div className="relative">
+              <div className="flex flex-wrap items-center justify-between gap-3 border-b border-primary/10 pb-6">
+                <p className="text-sm font-semibold uppercase tracking-widest text-secondary">
+                  Latest statement
+                </p>
+                <time
+                  className="text-sm font-medium text-text-dim"
+                  dateTime={featuredStatement.dateIso}
                 >
-                  <span className="mt-1 flex size-8 shrink-0 items-center justify-center rounded-lg bg-secondary/15 font-bold text-secondary">
-                    ✓
-                  </span>
-                  <span className="text-text-dark/90">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+                  {featuredStatement.dateLabel}
+                </time>
+              </div>
+              <h2
+                id="featured-statement-heading"
+                className="mt-6 text-2xl font-bold text-primary sm:text-3xl"
+              >
+                {featuredStatement.title}
+              </h2>
+              <blockquote className="mt-6 border-l-4 border-secondary/60 pl-6 text-lg leading-relaxed text-text-dim">
+                {featuredStatement.excerpt}
+              </blockquote>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Link
+                  href="/statements"
+                  className="inline-flex items-center gap-2 rounded-xl bg-secondary px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-secondary/20 transition hover:bg-accent-hover"
+                >
+                  View all statements
+                  <ArrowRight className="size-4" aria-hidden />
+                </Link>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
 
