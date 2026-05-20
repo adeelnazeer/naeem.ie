@@ -5,7 +5,15 @@ import { useEffect } from 'react';
 import Link from 'next/link';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { ArrowRight, MapPin, Mail, Phone } from 'lucide-react';
+import {
+  ArrowRight,
+  Home as HomeIcon,
+  HeartPulse,
+  TrainFront,
+  MapPin,
+  Mail,
+  Phone,
+} from 'lucide-react';
 
 export default function Home() {
   useEffect(() => {
@@ -13,6 +21,7 @@ export default function Home() {
       duration: 850,
       once: true,
       easing: 'ease-out-cubic',
+      disable: 'phone',
     });
   }, []);
 
@@ -38,7 +47,7 @@ export default function Home() {
         />
 
         <div className="relative mx-auto max-w-6xl px-4 pb-16 pt-10 sm:px-6 sm:pb-20 sm:pt-14 lg:px-8 lg:pt-18">
-          <div className="max-w-2xl" data-aos="fade-up">
+          <div className="max-w-3xl" data-aos="fade-up">
             <p className="text-sm font-semibold uppercase tracking-widest text-secondary">
               Working for the community with the community
             </p>
@@ -49,10 +58,8 @@ export default function Home() {
               Naeem <span className="text-primary">Iqbal</span>
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-text-dim sm:text-xl">
-              Naeem is an accountant and business advisor, well settled in the local community of{' '}
-              <span className="font-medium text-text-dark">Portlaoise</span> with his wife and four
-              children—committed to clear advice and steady support for people and businesses in the
-              region.
+            Naeem is deeply committed to serving the people of <span className="font-medium text-text-dark">Portlaoise</span> and <span className="font-medium text-text-dark">Co. Laois</span>, focused on listening to local voices and delivering practical solutions that strengthen the community. With a vision built on inclusion, progress, and accountability, he is dedicated to addressing local priorities and ensuring every resident has the opportunity to be heard. His goal is to support stronger communities, improved local services, and a brighter future for everyone in the region.
+
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
@@ -71,22 +78,43 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-16 grid gap-4 sm:grid-cols-3" data-aos="fade-up" data-aos-delay="100">
-            {[
-              { label: 'Local focus', value: 'Portlaoise & Co. Laois' },
-              { label: 'Roles', value: 'Accountant & advisor' },
-              { label: 'Community', value: 'Family & neighbourhood' },
-            ].map(({ label, value }) => (
-              <div
-                key={label}
-                className="rounded-2xl border border-primary/10 bg-white/80 p-5 shadow-sm backdrop-blur-sm"
-              >
-                <p className="text-xs font-semibold uppercase tracking-wider text-secondary">
-                  {label}
-                </p>
-                <p className="mt-2 text-base font-semibold text-primary">{value}</p>
-              </div>
-            ))}
+          <div
+            className="mt-16 lg:mt-20"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            aria-labelledby="priorities-heading"
+          >
+         
+            <ul className=" grid gap-4 sm:grid-cols-3">
+              {[
+                {
+                  title: 'Homes',
+                  body: 'Build housing that communities can afford.',
+                  icon: HomeIcon,
+                },
+                {
+                  title: 'Health',
+                  body: 'Secure healthcare that keeps pace with growth.',
+                  icon: HeartPulse,
+                },
+                {
+                  title: 'Infrastructure',
+                  body: 'Deliver transport and infrastructure that Portlaoise needs.',
+                  icon: TrainFront,
+                },
+              ].map(({ title, body, icon: Icon }) => (
+                <li
+                  key={title}
+                  className="flex flex-col rounded-2xl border border-primary/10 bg-white/90 p-5 shadow-sm backdrop-blur-sm transition hover:border-primary/25 hover:shadow-md"
+                >
+                  <span className="flex size-11 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                    <Icon className="size-5" aria-hidden />
+                  </span>
+                  <h3 className="mt-4 text-lg font-semibold text-primary">{title}</h3>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-text-dim">{body}</p>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>

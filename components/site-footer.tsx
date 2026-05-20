@@ -23,8 +23,8 @@ export function SiteFooter() {
               Naeem Iqbal
             </p>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-slate-400">
-              Accountant and business advisor in Portlaoise — working for the community with the
-              community.
+              Serving Portlaoise and Co. Laois — working for the community with the community,
+              focused on practical solutions that strengthen local life.
             </p>
             <Link
               href="/contacts"
@@ -94,7 +94,7 @@ export function SiteFooter() {
             </ul>
             <p className="mt-8">
               <a
-                href="https://www.facebook.com"
+                href="https://www.facebook.com/NaeemIqbalFA"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 text-sm font-medium text-blue-300/90 hover:text-secondary"

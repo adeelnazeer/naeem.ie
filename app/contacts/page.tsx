@@ -23,8 +23,8 @@ export default function ContactsPage() {
               Let&apos;s talk
             </h1>
             <p className="mt-5 max-w-xl text-lg text-slate-600 leading-relaxed">
-              Portlaoise, Co. Laois — reachable by email or phone for accounting and business advisory
-              enquiries.
+              Based in Portlaoise, Co. Laois — get in touch by email or phone with questions, ideas,
+              or local priorities you would like to share.
             </p>
 
             <div className="mt-10 grid gap-4 sm:grid-cols-3 lg:grid-cols-1 lg:gap-4 xl:grid-cols-3">
@@ -88,10 +88,8 @@ export default function ContactsPage() {
                     <p className="font-display text-xl font-bold tracking-tight text-white sm:text-2xl">
                       Naeem Iqbal
                     </p>
-                    <p className="mt-1 text-sm font-medium text-white/85">
-                      Accountant &amp; business advisor
-                    </p>
-                    <p className="mt-2 text-xs text-white/65">Portlaoise, Co. Laois</p>
+
+                    <p className="mt-1 text-xs text-white/65">Portlaoise, Co. Laois</p>
                   </figcaption>
                 </div>
               </div>
