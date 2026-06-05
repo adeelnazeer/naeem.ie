@@ -7,12 +7,14 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import {
   ArrowRight,
-  Home as HomeIcon,
+  GraduationCap,
   HeartPulse,
-  TrainFront,
+  Leaf,
   MapPin,
   Mail,
   Phone,
+  TrendingUp,
+  Users,
 } from 'lucide-react';
 import { featuredStatement } from '@/lib/statements';
 
@@ -85,37 +87,107 @@ export default function Home() {
             data-aos-delay="100"
             aria-labelledby="priorities-heading"
           >
-         
-            <ul className=" grid gap-4 sm:grid-cols-3">
-              {[
-                {
-                  title: 'Homes',
-                  body: 'Build housing that communities can afford.',
-                  icon: HomeIcon,
-                },
-                {
-                  title: 'Health',
-                  body: 'Secure healthcare that keeps pace with growth.',
-                  icon: HeartPulse,
-                },
-                {
-                  title: 'Infrastructure',
-                  body: 'Deliver transport and infrastructure that Portlaoise needs.',
-                  icon: TrainFront,
-                },
-              ].map(({ title, body, icon: Icon }) => (
-                <li
-                  key={title}
-                  className="flex flex-col rounded-2xl border border-primary/10 bg-white/90 p-5 shadow-sm backdrop-blur-sm transition hover:border-primary/25 hover:shadow-md"
+            <div className="flex items-center gap-4">
+              <div className="h-px flex-1 bg-slate-200" aria-hidden />
+              <h2
+                id="priorities-heading"
+                className="shrink-0 text-center text-xs font-bold tracking-[0.12em] text-[#1a73e8] sm:text-sm"
+              >
+                MY TOP PRIORITIES FOR LAOIS
+              </h2>
+              <div className="h-px flex-1 bg-slate-200" aria-hidden />
+            </div>
+
+            <div className="mt-10 grid gap-10 lg:grid-cols-[1fr_minmax(240px,300px)] lg:gap-12">
+              <ol className="space-y-8">
+                {[
+                  {
+                    num: 1,
+                    title: 'STRONG COMMUNITIES',
+                    body: 'Supporting local groups, investing in our towns and villages, and keeping Laois a great place to live.',
+                    icon: Users,
+                    color: '#34A853',
+                  },
+                  {
+                    num: 2,
+                    title: 'JOBS & ECONOMIC GROWTH',
+                    body: 'Attracting investment, backing local businesses, and creating quality jobs for our people.',
+                    icon: TrendingUp,
+                    color: '#4285F4',
+                  },
+                  {
+                    num: 3,
+                    title: 'BETTER EDUCATION & OPPORTUNITIES',
+                    body: 'Improving schools, supporting further education and giving young people the best start in life.',
+                    icon: GraduationCap,
+                    color: '#FBBC05',
+                  },
+                  {
+                    num: 4,
+                    title: 'HEALTHCARE THAT WORKS',
+                    body: 'Pushing for better access to GP services, shorter waiting times and stronger local healthcare.',
+                    icon: HeartPulse,
+                    color: '#EA4335',
+                  },
+                  {
+                    num: 5,
+                    title: 'A SUSTAINABLE LAOIS',
+                    body: 'Protecting our environment, improving transport, and building a greener, more sustainable county.',
+                    icon: Leaf,
+                    color: '#0d7c3f',
+                  },
+                ].map(({ num, title, body, icon: Icon, color }) => (
+                  <li key={title} className="flex gap-4 sm:gap-5">
+                    <span
+                      className="flex size-12 shrink-0 items-center justify-center rounded-full text-white shadow-sm sm:size-14"
+                      style={{ backgroundColor: color }}
+                    >
+                      <Icon className="size-5 sm:size-6" strokeWidth={2} aria-hidden />
+                    </span>
+                    <div className="min-w-0 pt-0.5">
+                      <p
+                        className="font-display text-3xl font-extrabold leading-none sm:text-4xl"
+                        style={{ color }}
+                      >
+                        {num}
+                      </p>
+                      <h3
+                        className="mt-1 text-sm font-bold tracking-wide sm:text-base"
+                        style={{ color }}
+                      >
+                        {title}
+                      </h3>
+                      <p className="mt-2 text-sm leading-relaxed text-text-dim sm:text-[0.9375rem]">
+                        {body}
+                      </p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+
+              <aside className="rounded-2xl border border-slate-200/80 bg-slate-50/80 p-6 shadow-sm sm:p-7 lg:self-start">
+                <Users className="size-8 text-[#4285F4]" strokeWidth={1.75} aria-hidden />
+                <p className="mt-4 font-display text-sm font-bold leading-snug tracking-wide text-[#4285F4] sm:text-base">
+                  LISTENING. REPRESENTING. DELIVERING.
+                </p>
+                <div
+                  className="mt-4 flex h-1 overflow-hidden rounded-full"
+                  aria-hidden
                 >
-                  <span className="flex size-11 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                    <Icon className="size-5" aria-hidden />
-                  </span>
-                  <h3 className="mt-4 text-lg font-semibold text-primary">{title}</h3>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-text-dim">{body}</p>
-                </li>
-              ))}
-            </ul>
+                  <span className="flex-1 bg-[#4285F4]" />
+                  <span className="flex-1 bg-[#EA4335]" />
+                  <span className="flex-1 bg-[#FBBC05]" />
+                  <span className="flex-1 bg-[#34A853]" />
+                </div>
+                <p className="mt-5 text-sm leading-relaxed text-text-dim">
+                  I believe in open communication, strong leadership and accountability to the people
+                  of Laois.
+                </p>
+                <p className="mt-4 font-display text-base italic text-[#1a73e8] sm:text-lg">
+                  Let&apos;s build a better future for Laois together.
+                </p>
+              </aside>
+            </div>
           </div>
         </div>
       </section>
