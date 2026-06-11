@@ -17,14 +17,14 @@ type GalleryItem = {
 };
 
 const galleryItems: GalleryItem[] = [
-  {
-    src: 'https://naeem.ie/gallery/Pic.JPG?ts=1728317740',
-    alt: 'Community campaign portrait: Naeem Iqbal with colleagues against a rural backdrop.',
-    caption: 'Campaign & colleagues',
-    colSpan: 'lg:col-span-12',
-    aspect: 'aspect-21/9 max-sm:aspect-video',
-    sizes: '100vw',
-  },
+  // {
+  //   src: 'https://naeem.ie/gallery/Pic.JPG?ts=1728317740',
+  //   alt: 'Community campaign portrait: Naeem Iqbal with colleagues against a rural backdrop.',
+  //   caption: 'Campaign & colleagues',
+  //   colSpan: 'lg:col-span-12',
+  //   aspect: 'aspect-21/9 max-sm:aspect-video',
+  //   sizes: '100vw',
+  // },
   {
     src: 'https://naeem.ie/gallery_gen/54b30429e041d79e0c6f0c0989ab143f_600x601.88087774295_fill.jpg',
     alt: 'Two professional men in suits shaking hands in front of a blue Delivering for Ireland event banner.',

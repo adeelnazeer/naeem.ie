@@ -35,7 +35,7 @@ export default function StatementsPage() {
                 {item.title}
               </h2>
               <p className="mt-4 leading-relaxed text-text-dim">{item.excerpt}</p>
-              <a
+              {/* <a
                 href={item.sourceUrl}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -43,7 +43,7 @@ export default function StatementsPage() {
               >
                 Read full statement
                 <ExternalLink className="size-4 shrink-0 opacity-90" aria-hidden />
-              </a>
+              </a> */}
             </article>
           ))}
         </div>

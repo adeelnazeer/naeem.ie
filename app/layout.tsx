@@ -19,17 +19,17 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   metadataBase: new URL("https://naeem.ie"),
   title: {
-    default: "Naeem Iqbal | Accountant & Business Advisor — Portlaoise, Co. Laois",
+    default: "Naeem Iqbal | Working for the community with the community",
     template: "%s | Naeem Iqbal",
   },
   description:
-    "Naeem Iqbal is an accountant and business advisor based in Portlaoise, Co. Laois. Working for the community with the community.",
+    "Naeem Iqbal is a candidate for Laois County Council in the 2026 local elections. He is working for the community with the community.",
   keywords: [
     "Naeem Iqbal",
-    "accountant Portlaoise",
-    "business advisor Laois",
-    "accountant Co. Laois",
-    "Portlaoise community",
+    "Laois County Council",
+    "Local elections",
+    "2026 local elections",
+    "Laois community",
   ],
   authors: [{ name: "Naeem Iqbal", url: "https://naeem.ie" }],
   creator: "Naeem Iqbal",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Naeem Iqbal | Working for the community with the community",
     description:
-      "Accountant and business advisor in Portlaoise, Co. Laois. Contact info@naeem.ie or 089 230 9015.",
+      "Naeem Iqbal is a candidate for Laois County Council in the 2026 local elections. He is working for the community with the community.",
     url: "https://naeem.ie",
     siteName: "Naeem Iqbal",
     locale: "en_IE",
@@ -56,9 +56,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Naeem Iqbal | Portlaoise, Co. Laois",
+    title: "Naeem Iqbal | Working for the community with the community",
     description:
-      "Accountant and business advisor. Working for the community with the community.",
+      "Naeem Iqbal is a candidate for Laois County Council in the 2026 local elections. He is working for the community with the community.",
   },
   alternates: {
     canonical: "https://naeem.ie",
@@ -75,7 +75,7 @@ export default function RootLayout({
     <html lang="en-IE" suppressHydrationWarning>
       <head>
         <meta name="geo.region" content="IE" />
-        <meta name="geo.placename" content="Portlaoise, Co. Laois, Ireland" />
+        <meta name="geo.placename" content="Laois, Ireland" />
         <meta name="geo.position" content="53.0294;-7.2983" />
         <meta name="ICBM" content="53.0294, -7.2983" />
         <link rel="canonical" href="https://naeem.ie" />
